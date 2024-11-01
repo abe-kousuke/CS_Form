@@ -10,13 +10,13 @@ namespace CS_Form
 {
     internal class TestButton : Button
     {
-        public TestButton(int x, int y,int width, int height)
+        public TestButton(int id ,int x, int y,int width, int height)
         {
             //ClickイベントにOnClick関数を登録
             Click += OnClick;
 
             //ボタン内に文字を表示させる
-            Text = "ボタン";
+            Text = id. ToString();
 
             //ボタンの生成場所を指定
             Location = new Point(x,y);
@@ -27,7 +27,7 @@ namespace CS_Form
 
         public void OnClick(object sender, EventArgs e)
         {
-            MessageBox.Show("(>_<)");
+            MessageBox.Show(Text);
         }
     }
 }

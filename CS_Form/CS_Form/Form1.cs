@@ -17,14 +17,11 @@ namespace CS_Form
             InitializeComponent();
 
             int j = 0;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
-                TestButton testButton = new TestButton(0+j, 0, 100, 100);
+                TestButton testButton = new TestButton(i,(i % 3) * 100, (i / 3) * 100, 100, 100);
                 Controls.Add(testButton);
-
-                TestButton testButton2 = new TestButton(100+j, 0, 100, 100);
-                Controls.Add(testButton2);
-                j+=200;
+                
             }
             
         }
