@@ -10,7 +10,7 @@ namespace CS_Form
 {
     internal class TestButton : Button
     {
-        public TestButton(int x, int y)
+        public TestButton(int x, int y,int width, int height)
         {
             //ClickイベントにOnClick関数を登録
             Click += OnClick;
@@ -18,8 +18,12 @@ namespace CS_Form
             //ボタン内に文字を表示させる
             Text = "ボタン";
 
+            //ボタンの生成場所を指定
             Location = new Point(x,y);
-        }
+
+            //ボタンの大きさを指定
+            Size = new Size(width,height);
+        }　
 
         public void OnClick(object sender, EventArgs e)
         {
