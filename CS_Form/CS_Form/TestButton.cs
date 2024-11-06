@@ -10,8 +10,11 @@ namespace CS_Form
 {
     internal class TestButton : Button
     {
-        public TestButton(int id ,int x, int y,int width, int height)
+        Form1 _form1;
+        public TestButton(Form1 form1, int id ,int x, int y,int width, int height)
         {
+            _form1 = form1;
+
             //ClickイベントにOnClick関数を登録
             Click += OnClick;
 
@@ -27,7 +30,7 @@ namespace CS_Form
 
         public void OnClick(object sender, EventArgs e)
         {
-            MessageBox.Show(Text);
+            _form1.LabelTextUpdate(Text);
         }
     }
 }
