@@ -11,15 +11,17 @@ namespace CS_Form
     internal class TestButton : Button
     {
         Form1 _form1;
-        public TestButton(Form1 form1, int id ,int x, int y,int width, int height)
+        public TestButton(Form1 form1, int i ,int x, int y,int width, int height)
         {
             _form1 = form1;
 
             //ClickイベントにOnClick関数を登録
             Click += OnClick;
 
+            string[] iro = new string[10] {"あか","あお","きいろ","みどり","しろ","くろ","ちゃいろ","ピンク","むらさき","きみどり"};
+
             //ボタン内に文字を表示させる
-            Text = id. ToString();
+            Text = iro[i];
 
             //ボタンの生成場所を指定
             Location = new Point(x,y);

@@ -14,6 +14,8 @@ namespace CS_Form
     {
         TestLabel _testLabel;
 
+        TestTextBox _testTextBox;
+
         public Form1()
         {
             InitializeComponent();
@@ -21,13 +23,16 @@ namespace CS_Form
             int j = 0;
             for (int i = 0; i < 10; i++)
             {
-                TestButton testButton = new TestButton( this, i,(i % 3) * 100, (i / 3) * 100, 100, 100);
+                TestButton testButton = new TestButton( this, i,(i % 5) * 100, (i / 5) * 100, 100, 100);
                 Controls.Add(testButton);
                 
             }
 
              _testLabel= new TestLabel("ラベルです",100,300,100,500);
             Controls.Add(_testLabel);
+
+            _testTextBox = new TestTextBox("テキストボックスです",10,400,500,100);
+            Controls.Add(_testTextBox);
 
             //Label label = new Label();
             //label.Location = new Point(30, 400);
