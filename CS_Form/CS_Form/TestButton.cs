@@ -30,8 +30,12 @@ namespace CS_Form
             Size = new Size(width,height);
         }　
 
-        public void OnClick(object sender, EventArgs e)
+        public void OnClick(object sender, EventArgs s)
         {
+           string t =_form1.BottunLabelReplacement(Text);
+
+            Text = t;
+
             _form1.LabelTextUpdate(Text);
         }
     }

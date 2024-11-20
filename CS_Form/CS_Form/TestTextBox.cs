@@ -32,5 +32,14 @@ namespace CS_Form
             Text = str;
         }
 
+        public string TextReplacement(string str)
+        {
+            string temp = Text;
+
+            Text = str;
+
+            return temp;
+        }
+
     }
 }

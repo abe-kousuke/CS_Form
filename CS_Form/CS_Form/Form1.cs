@@ -14,7 +14,7 @@ namespace CS_Form
     {
         TestLabel _testLabel;
 
-        TestTextBox _testTextBox;
+        TestTextBox _textbox;
 
         public Form1()
         {
@@ -31,8 +31,8 @@ namespace CS_Form
              _testLabel= new TestLabel("ラベルです",100,300,100,500);
             Controls.Add(_testLabel);
 
-            _testTextBox = new TestTextBox("テキストボックスです",10,400,500,100);
-            Controls.Add(_testTextBox);
+            _textbox = new TestTextBox("テキストボックスです",10,400,500,100);
+            Controls.Add(_textbox);
 
             //Label label = new Label();
             //label.Location = new Point(30, 400);
@@ -49,5 +49,13 @@ namespace CS_Form
         {
             _testLabel.TextUpdate(str);
         }
+
+        public string BottunLabelReplacement(string str)
+        {
+            string s = _textbox.TextReplacement(str);
+
+            return s;
+        }
+
     }
 }
